@@ -8,6 +8,7 @@ function downloadFile() {
             console.log("download done");
             resolve("Success");
         });
+        console.log ("downloadFile bottom");
     })
 }
 
@@ -34,6 +35,7 @@ console.log ("buttom");
 /* Result:
 
 $ node async_ex3.js
+downloadFile bottom
 buttom
 download done
 data is 100
