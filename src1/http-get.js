@@ -12,7 +12,9 @@ http.get(url, (res) => {
   res.on("end", () => {
     console.log(data)
   })    
-})
+}).on('error', (e) => {
+  console.error(`error: ${e.message}`);
+});
 
 console.log ("bye");
 
