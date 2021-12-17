@@ -3,8 +3,8 @@
 
 //var broker = 'localhost';
 var broker = 'test.mosquitto.org';
-//var topic = '#';
 var topic = 'sam/test';
+var msg = 'nodejs mqtt test'
 var mqtt = require ('mqtt');
 var opt = {
     port:1883,
@@ -14,9 +14,8 @@ var opt = {
 var client = mqtt.connect('mqtt://' + broker, opt);
 client.on ('connect', function () {
     console.log (broker + ' connected');
-    client.subscribe (topic);
-});
-
-client.on ('message', function (topic, msg) {
-    console.log (topic + ' - ' + msg.toString());
+    client.publish(topic, msg , function() {
+        console.log("Message is published");
+        client.end();
+    });
 });
