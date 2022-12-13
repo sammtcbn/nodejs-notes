@@ -9,5 +9,5 @@ if ! [ -x "$(command -v curl)" ]; then
     exit 1
 fi
 
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 apt-get -y install nodejs

@@ -5,4 +5,4 @@ if [ "$EUID" -ne 0 ]; then
 fi
 
 apt update
-apt -y install nodejs npm
+apt-get -y install nodejs npm
