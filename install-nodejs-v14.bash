@@ -10,4 +10,4 @@ if ! [ -x "$(command -v curl)" ]; then
 fi
 
 curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-apt-get -y install nodejs
+apt-get install -y nodejs
